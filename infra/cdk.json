@@ -17,5 +17,20 @@
     ]
   },
   "context": {
+    "appName": "mastra-rag-example",
+    "usePrivateSubnet": false,
+    "ecr": {
+      "repositoryName": "mastra-rag-example"
+    },
+    "ecs": {
+      "cpu": "512",
+      "memoryMiB": "1024",
+      "applicationPort": 3000,
+      "healthCheck": {
+        "interval": 30,
+        "timeout": 5
+      }
+    },
+    "rdbPort": 5432
   }
 }
