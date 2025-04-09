@@ -23,6 +23,7 @@ const network = new NetworkStack(app, 'mastra-rag-example-netrowk-stack', {
     account,
   },
 });
+network.addDependency(ecr);
 
 const alb = new AlbStack(app, 'mastra-rag-example-alb-stack', {
   env: {
@@ -62,7 +63,6 @@ const ecs = new EcsStack(app, 'mastra-rag-example-ecs-stack', {
 
 });
 ecs.addDependency(rds);
-ecs.addDependency(ecr);
 
 const stacks = [ecr, network, alb, ecs, rds];
 stacks.forEach((stack) => {

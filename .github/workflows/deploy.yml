@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 env:
-  OIDC_IAM_ROLE_ARN: ${{ secrets.OIDC_IAM_ROLE_ARN }}
+  OIDC_IAM_ROLE_ARN: ${{ secrets.IAM_ROLE_ARN }}
   AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
   AWS_REGION: us-west-2
 
