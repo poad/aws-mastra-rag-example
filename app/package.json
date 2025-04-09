@@ -1,0 +1,42 @@
+{
+  "name": "@aws-mastra-rag-example/app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "mastra dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "packageManager": "pnpm@10.8.0",
+  "dependencies": {
+    "@ai-sdk/amazon-bedrock": "^2.2.7",
+    "@ai-sdk/anthropic": "^1.2.9",
+    "@mastra/core": "^0.8.1",
+    "@mastra/pg": "^0.2.8",
+    "@mastra/rag": "^0.1.16",
+    "@opentelemetry/instrumentation": "^0.200.0",
+    "langfuse-vercel": "^3.37.1",
+    "mastra": "^0.4.7",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^1.2.8",
+    "@eslint/js": "^9.24.0",
+    "@stylistic/eslint-plugin": "^4.2.0",
+    "@stylistic/eslint-plugin-js": "^4.2.0",
+    "@stylistic/eslint-plugin-plus": "^4.2.0",
+    "@stylistic/eslint-plugin-ts": "^4.2.0",
+    "@types/node": "^22.14.0",
+    "eslint": "^9.24.0",
+    "eslint-import-resolver-typescript": "^4.3.2",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-promise": "^7.2.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.29.1"
+  }
+}

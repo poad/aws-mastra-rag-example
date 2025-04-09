@@ -1,0 +1,20 @@
+{
+  "name": "aws-mastra-rag-example",
+  "version": "1.0.0",
+  "description": "",
+  "private":true,
+  "type": "module",
+  "scripts": {
+    "lint": "pnpm -r lint",
+    "lint-fix": "pnpm -r lint-fix",
+    "build": "pnpm -r --if-present build",
+    "test": "pnpm -r --if-present --parallel test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.8.0",
+  "devDependencies": {
+    "pnpm": "^10.8.0"
+  }
+}
