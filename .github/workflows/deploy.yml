@@ -71,7 +71,7 @@ jobs:
       id: config-ecr-tag
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: backstage-example
+        ECR_REPOSITORY: mastra-rag-example
         IMAGE_TAG: latest
       run: |
         echo "ecr-tag=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> "$GITHUB_OUTPUT"
@@ -81,8 +81,7 @@ jobs:
       with:
         push: false
         tags: ${{ steps.config-ecr-tag.outputs.ecr-tag }}
-        context: backstage
-        file: backstage/packages/backend/Dockerfile
+        context: app
         platforms: linux/arm64
         load: true
         pull: true
