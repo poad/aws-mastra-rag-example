@@ -8,19 +8,20 @@ COPY src src
 # Stage 2 - Install dependencies and build packages
 FROM node:22-bookworm-slim AS build
 
+RUN npm install -g pnpm
+
 USER node
 WORKDIR /app
 
 COPY --from=packages --chown=node:node /app .
 
 RUN --mount=type=cache,target=/home/node/.cache/pnpm,sharing=locked,uid=1000,gid=1000 \
-    npx pnpm add -D pnpm && \
-    npx pnpm self-update && \
-    pnpm install
+    pnpm add -D pnpm && \
+    pnpm self-update && \
+    pnpm install && \
+    pnpm build
 
 COPY --chown=node:node . .
-
-RUN yarn build
 
 FROM node:22-bookworm-slim
 
