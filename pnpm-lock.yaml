@@ -116,8 +116,8 @@ importers:
         specifier: ^22.14.0
         version: 22.14.0
       aws-cdk:
-        specifier: ^3.0.0
-        version: 3.0.0
+        specifier: ^2.1007.0
+        version: 2.1007.0
       esbuild:
         specifier: ^0.25.2
         version: 0.25.2
@@ -2710,10 +2710,9 @@ packages:
       - yaml
       - mime-types
 
-  aws-cdk@3.0.0:
-    resolution: {integrity: sha512-VBc2jv0In++hzlRwvCDf5VdodTivKE1GsNggudKEAfVCTx0r73vpbY245ktWGJf5yXVl3d2wjfEZv8TRW+i9eQ==}
+  aws-cdk@2.1007.0:
+    resolution: {integrity: sha512-/UOYOTGWUm+pP9qxg03tID5tL6euC+pb+xo0RBue+xhnUWwj/Bbsw6DbqbpOPMrNzTUxmM723/uMEQmM6S26dw==}
     engines: {node: '>= 14.15.0'}
-    deprecated: This version was published accidentally. Please use 2.x.x instead.
     hasBin: true
 
   aws4fetch@1.0.20:
@@ -9351,7 +9350,7 @@ snapshots:
       '@aws-cdk/cloud-assembly-schema': 41.2.0
       constructs: 10.4.2
 
-  aws-cdk@3.0.0:
+  aws-cdk@2.1007.0:
     optionalDependencies:
       fsevents: 2.3.2
 
