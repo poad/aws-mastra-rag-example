@@ -1,0 +1,32 @@
+version: '4'
+
+services:
+  postgres:
+    build:
+      context: local
+      dockerfile: Dockerfile
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mastra
+    ports:
+      - 5432:5432
+    expose:
+      - 5432
+    hostname: postgres
+
+  mastra:
+    build:
+      context: app
+      dockerfile: Dockerfile
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mastra
+      POSTGRES_DATABASE: vector-store
+    ports:
+      - 4111:4111
+    expose:
+      - 4111
+    depends_on:
+      - postgres

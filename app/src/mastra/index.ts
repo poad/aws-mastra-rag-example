@@ -7,7 +7,7 @@ import { PgVector } from '@mastra/pg';
 import { researchAgent } from './agents/';
  
 // Initialize Mastra instance
-const pgVector = new PgVector(`postgres://${process.env.POSTGRES_USER}:${process.env.POSTGRES_PASSWORD}@${process.env.POSTGRES_HOST}:${process.env.POSTGRES_PORT}/vector-store`);
+const pgVector = new PgVector(`postgres://${process.env.POSTGRES_USER}:${process.env.POSTGRES_PASSWORD}@${process.env.POSTGRES_HOST}:${process.env.POSTGRES_PORT}/${process.env.POSTGRES_DATABASE ?? 'vector-store'}`);
 export const mastra = new Mastra({
   agents: { researchAgent },
   vectors: { pgVector },

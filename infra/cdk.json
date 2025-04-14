@@ -25,7 +25,7 @@
     "ecs": {
       "cpu": "512",
       "memoryMiB": "1024",
-      "applicationPort": 3000,
+      "applicationPort": 4111,
       "healthCheck": {
         "interval": 30,
         "timeout": 5
